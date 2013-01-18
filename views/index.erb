@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Exchange Quote Service</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="/stylesheets/convert.css" type="text/css" />
+</head>
+<body>
+<div class="wrapper">
+  <div class="banner">
+    MILES to KM to MILES
+    <div class="banner_slogan">
+      Convert miles to kilometers or kilometers to miles.
+    </div>
+  </div>
+  <div class="content">
+    <div class="measure_section">
+      <div class="conv_title">
+        Miles to Kilometers
+      </div>
+      <form action="/to_km" method="post" accept-charset="utf-8">
+        <input type="text" name="post[miles]" id="miles">
+        <input type="submit" value="CONVERT TO KILOMETERS">
+      </form>
+    </div>
+    <div class="measure_section">
+      <div class="conv_title">
+        Kilometers to Miles
+      </div>
+      <form action="/to_miles" method="post" accept-charset="utf-8">
+        <input type="text" name="post[kilometers]" id="kilometers">
+        <input type="submit" value="CONVERT TO MILES">
+      </form>
+    </div>
+  </div> <!-- closing content div -->
+  <div class="footer">
+    App by <a href="http://www.omahaareaman.com" target="_blank">omahaareaman.com</a>
+  </div>
+</div> <!-- closing wrapper div> -->
+</body>
+</html>
