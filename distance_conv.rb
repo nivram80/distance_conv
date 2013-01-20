@@ -9,13 +9,13 @@ get '/' do
 end
 
 post '/to_km' do
-  @now_km = MilesToKm.new(params[:miles]).miles_to_km
-  # @now_km = @m.miles_to_km
+  @m = MilesToKm.new(params[:miles])
+  @now_km = @m.miles_to_km
   erb :to_km
 end
 
 post '/to_miles' do
-  @now_miles = KmToMiles.new(params[:kilometers]).km_to_miles
-  # @now_miles = @km.km_to_miles
+  @km = KmToMiles.new(params[:kilometers])
+  @now_miles = @km.km_to_miles
   erb :to_miles
 end
