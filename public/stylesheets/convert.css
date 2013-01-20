@@ -31,3 +31,5 @@ body { font-family: Helvetica, Tahoma, sans-serif;
           border-top: 1px dotted #000;
           font-size: 12px;
 }
+a { color: #dd0000;
+}
