@@ -1,10 +1,7 @@
 require 'sinatra'
 require './convert'
 
-# enable :sessions
-
 get '/' do
-  # session[:distance_conv]
   erb :index
 end
 
