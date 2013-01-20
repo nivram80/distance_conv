@@ -1,39 +1,21 @@
 require 'sinatra'
+require './convert'
 
-class MilesToKm
-  attr_accessor :miles_to_km
-
-  def initialize(miles)
-    @miles = miles
-  end
-
-  def miles_to_km
-    @miles * 1.609344
-  end
-end
-
-class KmToMiles
-  attr_accessor :km_to_miles
-
-  def initialize(kilometers)
-    @kilometers = kilometers
-  end
-
-  def km_to_miles
-    @kilometers * 0.621371
-  end
-end
+# enable :sessions
 
 get '/' do
+  # session[:distance_conv]
   erb :index
 end
 
 post '/to_km' do
-  @conv_data = MilesToKm.new(params[:miles])
+  @now_km = MilesToKm.new(params[:miles]).miles_to_km
+  # @now_km = @m.miles_to_km
   erb :to_km
 end
 
 post '/to_miles' do
-  @conv_data = KmToMiles.new(params[:kilometers])
+  @now_miles = KmToMiles.new(params[:kilometers]).km_to_miles
+  # @now_miles = @km.km_to_miles
   erb :to_miles
 end
