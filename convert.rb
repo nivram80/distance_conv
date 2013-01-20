@@ -2,7 +2,7 @@ class MilesToKm
   attr_accessor :miles_to_km
 
   def initialize(miles)
-    @miles = miles
+    @miles = miles.to_f
   end
 
   def miles_to_km
@@ -14,7 +14,7 @@ class KmToMiles
   attr_accessor :km_to_miles
 
   def initialize(kilometers)
-    @kilometers = kilometers
+    @kilometers = kilometers.to_f
   end
 
   def km_to_miles
